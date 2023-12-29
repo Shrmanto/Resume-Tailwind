@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Tailwind Css -->
+    <link rel="stylesheet" href="../dist/tailwind.css">
+    <!-- Alpine Js -->
+    <script src="//unpkg.com/alpinejs" defer></script>
+</head>
+<body class="bg-dark min-h-screen 2xl:overflow-visible xl:overflow-hidden">
+    <!-- Navbar Start -->
+    <nav class="" x-data="{navOpen : false}">
+        <div class="container mx-auto py-5 px-4">
+            <div class="flex justify-between items-center">
+                <a href="" class="font-extrabold text-2xl text-orange lg:order-1 md:order-2">Shrmanto.</a>
+                <button @click = "navOpen = !navOpen" class="bg-orange p-[8px] px-[16px] text-white rounded-xl text-2xl order-2 md:order-1 lg:hidden md:block"><i class="ri-menu-line"></i></button>
+                <div class="lg:order-2 hidden lg:block lg:z-50">
+                    <ul class="flex gap-[20px]">
+                        <li><a href="" class="icon-social text-3xl text-white"><i class="ri-facebook-box-line"></i></a></li>
+                        <li><a href="" class="icon-social text-3xl text-white"><i class="ri-instagram-line"></i></a></li>
+                        <li><a href="" class="icon-social text-3xl text-white"><i class="ri-whatsapp-line"></i></a></li>
+                        <li><a href="" class="icon-social text-3xl text-white"><i class="ri-github-fill"></i></a></li>
+                        <li><a href="" class="icon-social text-3xl text-white"><i class="ri-linkedin-box-line"></i></a></li>
+                        <li><a href="" class="icon-social text-3xl text-white"><i class="ri-briefcase-line"></i></a></li>
+                        <li><a href="" class="icon-social text-3xl text-white"><i class="ri-mail-line"></i></a></li>
+                        <li>
+                            <button class="bg-orange py-[8px] px-[24px] rounded-md text-white font-semibold">Download CV</button>
+                        </li>
+                    </ul>
+                </div>
+                <button class="bg-orange py-[8px] px-[24px] rounded-md text-white font-semibold order-3 hidden lg:hidden md:block">Download CV</button>
+            </div>
+        </div>
+        <div 
+        x-show="navOpen" 
+        x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="opacity-0 scale-90"
+        x-transition:enter-end="opacity-100 scale-100"
+        x-transition:leave="transition ease-in duration-300"
+        x-transition:leave-start="opacity-100 scale-100"
+        x-transition:leave-end="opacity-0 scale-90"
+        class="p-4 bg-red-400">
+            <ul class="flex justify-between">
+                <li><a href="" class="icon-social text-3xl text-white"><i class="ri-facebook-box-line"></i></a></li>
+                <li><a href="" class="icon-social text-3xl text-white"><i class="ri-instagram-line"></i></a></li>
+                <li><a href="" class="icon-social text-3xl text-white"><i class="ri-whatsapp-line"></i></a></li>
+                <li><a href="" class="icon-social text-3xl text-white"><i class="ri-github-fill"></i></a></li>
+                <li><a href="" class="icon-social text-3xl text-white"><i class="ri-linkedin-box-line"></i></a></li>
+                <li><a href="" class="icon-social text-3xl text-white"><i class="ri-briefcase-line"></i></a></li>
+                <li><a href="" class="icon-social text-3xl text-white"><i class="ri-mail-line"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Section Hero -->
+    <section class="">
+        <div class="container mx-auto px-4 min-h-screen">
+            <div class="grid grid-cols-12">
+                <div class="xl:col-span-4 lg:col-span-5 md:col-span-4 col-span-12 py-[60px] flex items-center lg:z-10 md:z-10">
+                    <div class="lg:text-start md:text-start text-center">
+                        <h3 class="text-white 2xl:text-[20px] text-[18px] font-medium">Hello, my name is</h3>
+                        <h1 class="text-[40px] 2xl:text-[48px] font-bold text-orange">Suhermanto</h1>
+                        <h3 class="text-white 2xl:text-[24px] text-[20px] font-semibold">A Graphic Designer and Creative Developer.</h3>
+                        <div class="line bg-orange 2xl:w-[496px] w-[396px] h-[10px] my-[10px]"></div>
+                        <p class="text-[13px] 2xl:text-[16px] text-white">I am an Informatics student at Jember University who is interested in UI/UX Design, Frontend & Web Developer, a little bit in Game Developer. High enthusiasm to continue learning and contributing in a collaborative work environment. Looking for internship opportunities in frontend or backend web development.</p>
+                        <button class="bg-orange 2xl:px-[35px] py-[8px] px-[25px] rounded-md text-white font-semibold mt-[20px]">Hire Me</button>
+                    </div>
+                </div>
+                <div class="xl:col-span-4 lg:col-span-7 md:col-span-8 hidden 2xl:flex 2xl:justify-center xl:block relative lg:flex lg:justify-end md:flex md:justify-end">
+                    <img src="../public/assets/img/IMG_2063 2.png" class="absolute bottom-0 2xl:right-0 2xl:w-auto 2xl:h-auto xl:right-0 xl:w-auto xl:h-auto lg:w-[361px] lg:h-[547px] lg:right-[40px] md:w-[361px] md:h-[547px]" alt="">
+                    <div class="content-skill absolute bottom-[40px] right-0 w-full 2xl:flex 2xl:justify-center xl:flex xl:justify-center lg:flex lg:justify-end md:flex md:justify-end">
+                        <div class="graphic-design bg-slate-300 bg-opacity-50 lg:w-[200px] lg:h-[50px] md:w-[200px] md:h-[50px] flex items-center justify-center border-white border-4 rounded-xl">
+                            <h2 class="text-white text-[16px] font-bold lg:text-[12px] md:text-[12px]"><i class="ri-pen-nib-fill border-white border-4 p-[5px] me-[10px] rounded-lg"></i>Graphic Design</h2>
+                        </div>
+                        <div class="frontend-developer bg-slate-300 bg-opacity-50 lg:w-[230px] lg:h-[50px] md:w-[230px] md:h-[50px] flex items-center justify-center border-white border-4 rounded-xl ms-[20px]">
+                            <h2 class="text-white text-[16px] font-bold lg:text-[12px] md:text-[12px]"><i class="ri-pen-nib-fill border-white border-4 p-[5px] me-[10px] rounded-lg"></i>Frontend Developer</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="xl:col-span-4 lg:col-span-12 md:col-span-12 col-span-12 py-[60px]">
+                    <div class="xl:text-end text-center xl:block lg:hidden md:hidden">
+                        <div class="content-myskill flex flex-wrap justify-center xl:justify-end">
+                            <h1 class="text-orange font-bold 2xl:text-[40px] text-[32px] w-full">My Skills</h1>
+                            <div class="content-process flex w-full justify-center xl:justify-end mt-[20px]">
+                                <div class="design bg-slate-400 bg-opacity-50 flex items-center relative 2xl:w-[210px] w-[173px] h-[30px] -z-20">
+                                    <h5 class="text-white font-semibold text-[12px] ms-[20px]"><i class="ri-pen-nib-fill me-[10px]"></i>Design</h5>
+                                    <div class="bg-orange absolute 2xl:w-[190px] w-[153px] h-[30px] -z-10"></div>
+                                </div>
+                                <div class="programming bg-slate-400 bg-opacity-50 flex items-center relative 2xl:w-[210px] w-[173px] h-[30px] ms-[20px] -z-20">
+                                    <h5 class="text-white font-semibold text-[12px] ms-[20px]"><i class="ri-code-s-slash-line me-[10px]"></i></i>Programming</h5>
+                                    <div class="bg-orange absolute 2xl:w-[147px] w-[110px] h-[30px] -z-10"></div>
+                                </div>
+                            </div>
+                            <div class="myskills flex flex-wrap gap-[12px] justify-center xl:justify-end mt-[20px] 2xl:w-[440px] 2xl:h-[140px] w-[373px] h-[105px] bg-slate-300 bg-opacity-50 p-[15px] rounded-lg">
+                                <img src="../public/assets/img/html.png" class="2xl:w-[40px] 2xl:h-[40px] w-[30px] h-[30px]" alt="">
+                                <img src="../public/assets/img/css.png" class="2xl:w-[40px] 2xl:h-[40px] w-[30px] h-[30px]" alt="">
+                                <img src="../public/assets/img/js.png" class="2xl:w-[40px] 2xl:h-[40px] w-[30px] h-[30px]" alt="">
+                                <img src="../public/assets/img/react.png" class="2xl:w-[40px] 2xl:h-[40px] w-[30px] h-[30px]" alt="">
+                                <img src="../public/assets/img/bootstrap.png" class="2xl:w-[40px] 2xl:h-[40px] w-[30px] h-[30px]" alt="">
+                                <img src="../public/assets/img/php.png" class="2xl:w-[40px] 2xl:h-[40px] w-[30px] h-[30px]" alt="">
+                                <img src="../public/assets/img/Laravel.png" class="2xl:w-[40px] 2xl:h-[40px] w-[30px] h-[30px]" alt="">
+                                <img src="../public/assets/img/Github.png" class="2xl:w-[40px] 2xl:h-[40px] w-[30px] h-[30px]" alt="">
+                                <img src="../public/assets/img/git.png" class="2xl:w-[40px] 2xl:h-[40px] w-[30px] h-[30px]" alt="">
+                                <img src="../public/assets/img/figma.png" class="2xl:w-[40px] 2xl:h-[40px] w-[30px] h-[30px]" alt="">
+                                <img src="../public/assets/img/photoshop.png" class="2xl:w-[40px] 2xl:h-[40px] w-[30px] h-[30px]" alt="">
+                            </div>
+                        </div>
+                        <div class="content-education mt-[20px]">
+                            <h1 class="text-orange font-bold 2xl:text-[40px] text-[32px] w-full mb-[20px]">Education</h1>
+                            <h5 class="text-white 2xl:text-[16px] text-[14px] font-medium">Aug 2021 - May 2025 (Expect)</h5>
+                            <h3 class="text-white 2xl:text-[20px] text-[18px] font-bold">Universitas Jember - Jember, Jawa Timur</h3>
+                            <h5 class="text-white 2xl:text-[16px] text-[14px] font-normal">Bachelor Degree in Informatika, 3.63/4.00</h5>
+                            <button class="text-white bg-slate-300 bg-opacity-60 w-[30px] h-[30px] p-[1px] rounded-full mt-[15px] border-white border-2"><i class="ri-add-line"></i></button>
+                        </div>
+                        <div class="content-experience mt-[20px]">
+                            <h1 class="text-orange font-bold 2xl:text-[40px] text-[32px] w-full mb-[20px]">Experience</h1>
+                            <h5 class="text-white 2xl:text-[16px] text-[14px] font-medium">Aug 2023 - Dec 2023</h5>
+                            <h3 class="text-white 2xl:text-[20px] text-[18px] font-bold">PT Gits Indonesia - Bandung, Jawa Barat</h3>
+                            <h5 class="text-white 2xl:text-[16px] text-[14px] font-semibold">Study Independent - Full Stack Web Developer</h5>
+                            <h5 class="text-white 2xl:text-[16px] text-[14px] font-normal">Focus on full stack web developer. Skills: HTML, CSS, JavaScript, PHP, and Laravel. Responsive design and project management.</h5>
+                            <button class="text-white bg-slate-300 bg-opacity-60 w-[30px] h-[30px] p-[1px] rounded-full mt-[15px] border-white border-2"><i class="ri-add-line"></i></button>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-12 xl:hidden">
+                        <div class="lg:col-span-6 md:col-span-6 md:block hidden">
+                            <div class="content-myskill py-[100px]">
+                                <h1 class="text-orange font-bold text-[32px] w-full">My Skills</h1>
+                                <div class="content-process flex mt-[20px]">
+                                    <div class="design bg-slate-400 bg-opacity-50 flex items-center relative w-[173px] h-[30px] -z-20">
+                                        <h5 class="text-white font-semibold text-[12px] ms-[20px]"><i class="ri-pen-nib-fill me-[10px]"></i>Design</h5>
+                                        <div class="bg-orange absolute w-[153px] h-[30px] -z-10"></div>
+                                    </div>
+                                    <div class="programming bg-slate-400 bg-opacity-50 flex items-center relative w-[173px] h-[30px] ms-[20px] -z-20">
+                                        <h5 class="text-white font-semibold text-[12px] ms-[20px]"><i class="ri-code-s-slash-line me-[10px]"></i></i>Programming</h5>
+                                        <div class="bg-orange absolute w-[110px] h-[30px] -z-10"></div>
+                                    </div>
+                                </div>
+                                <div class="myskills flex flex-wrap gap-[12px] justify-center xl:justify-end mt-[20px] w-[373px] h-[105px] bg-slate-300 bg-opacity-50 p-[15px] rounded-lg">
+                                    <img src="../public/assets/img/html.png" class="w-[30px] h-[30px]" alt="">
+                                    <img src="../public/assets/img/css.png" class="w-[30px] h-[30px]" alt="">
+                                    <img src="../public/assets/img/js.png" class="w-[30px] h-[30px]" alt="">
+                                    <img src="../public/assets/img/react.png" class="w-[30px] h-[30px]" alt="">
+                                    <img src="../public/assets/img/bootstrap.png" class="w-[30px] h-[30px]" alt="">
+                                    <img src="../public/assets/img/php.png" class="w-[30px] h-[30px]" alt="">
+                                    <img src="../public/assets/img/Laravel.png" class="w-[30px] h-[30px]" alt="">
+                                    <img src="../public/assets/img/Github.png" class="w-[30px] h-[30px]" alt="">
+                                    <img src="../public/assets/img/git.png" class="w-[30px] h-[30px]" alt="">
+                                    <img src="../public/assets/img/figma.png" class="w-[30px] h-[30px]" alt="">
+                                    <img src="../public/assets/img/photoshop.png" class="w-[30px] h-[30px]" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-6 md:col-span-6 md:block hidden md:ms-[50px]">
+                            <div class="content-education mt-[20px]">
+                                <h1 class="text-orange font-bold text-[32px] w-full mb-[20px]">Education</h1>
+                                <h5 class="text-white text-[14px] font-medium">Aug 2021 - May 2025 (Expect)</h5>
+                                <h3 class="text-white text-[18px] font-bold">Universitas Jember - Jember, Jawa Timur</h3>
+                                <h5 class="text-white text-[14px] font-normal">Bachelor Degree in Informatika, 3.63/4.00</h5>
+                                <button class="text-white bg-slate-300 bg-opacity-60 w-[30px] h-[30px] p-[1px] rounded-full mt-[15px] border-white border-2"><i class="ri-add-line"></i></button>
+                            </div>
+                            <div class="content-experience mt-[20px]">
+                                <h1 class="text-orange font-bold text-[32px] w-full mb-[20px]">Experience</h1>
+                                <h5 class="text-white text-[14px] font-medium">Aug 2023 - Dec 2023</h5>
+                                <h3 class="text-white text-[18px] font-bold">PT Gits Indonesia - Bandung, Jawa Barat</h3>
+                                <h5 class="text-white text-[14px] font-medium">Study Independent - Full Stack Web Developer</h5>
+                                <h5 class="text-white text-[14px] font-normal">Focus on full stack web developer. Skills: HTML, CSS, JavaScript, PHP, and Laravel. Responsive design and project management.</h5>
+                                <button class="text-white bg-slate-300 bg-opacity-60 w-[30px] h-[30px] p-[1px] rounded-full mt-[15px] border-white border-2"><i class="ri-add-line"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
